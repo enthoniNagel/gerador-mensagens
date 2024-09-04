@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# Gerador de Mensagens Motivacionais
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Objetivo
 
-## Available Scripts
+Criar um componente que atualiza e exibe uma mensagem inspiradora com base no texto digitado pelo usuário, além de exibir a palavra-chave digitada.
 
-In the project directory, you can run:
+## Descrição
 
-### `npm start`
+O projeto contém dois componentes React: `GeradorMensagens` e `ExibidorPalavras`. O `GeradorMensagens` permite ao usuário digitar uma palavra-chave e exibe uma mensagem inspiradora relacionada. O `ExibidorPalavras` mostra a palavra-chave digitada em tempo real.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Instruções
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. **Inicialize o Estado do Componente**
 
-### `npm test`
+   O estado inicial do componente `GeradorMensagens` deve ter uma propriedade `mensagem` definida como uma string vazia.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. **Crie o Método `atualizarMensagem`**
 
-### `npm run build`
+   Este método deve atualizar o valor da `mensagem` com base na palavra-chave digitada pelo usuário.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. **Crie o Componente `ExibidorPalavras`**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   Este componente deve ter um campo de entrada e exibir a palavra-chave digitada em tempo real. Ele deve receber o método `atualizarMensagem` como uma prop e chamá-lo sempre que a entrada mudar.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. **Renderize o Componente**
 
-### `npm run eject`
+   - No componente `GeradorMensagens`, use o `ExibidorPalavras` e passe o método `atualizarMensagem` como uma prop.
+   - Exiba a mensagem inspiradora e a palavra-chave digitada.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Estrutura do Projeto
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. **Criação do Projeto**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   Crie o projeto usando `create-react-app` com um nome em minúsculas:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   ```bash
+   npx create-react-app gerador-mensagens
